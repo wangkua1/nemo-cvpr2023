@@ -1,0 +1,15 @@
+argcomplete==2.0.0
+distlib==0.3.4
+filelock==3.6.0
+packaging==21.3
+pipx==1.1.0
+platformdirs==2.5.2
+PyOpenGL==3.1.5
+PyOpenGL-accelerate==3.1.5
+pyparsing==3.0.9
+shiboken6==6.3.1
+shiboken6-generator==6.3.1
+six==1.16.0
+soupsieve==2.3.2.post1
+userpath==1.8.0
+virtualenv==20.14.1

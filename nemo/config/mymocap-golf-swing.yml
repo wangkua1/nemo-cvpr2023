@@ -1,0 +1,12 @@
+exp_dir: '/home/groups/syyeung/wangkua1/nemo/exps/mymocap_golf_swing'
+videos:
+  root_dir: '/home/groups/syyeung/wangkua1/data/mymocap/trimmed1'
+  names: 
+    ['golf_swing.0.mp4',
+    'golf_swing.1.mp4',
+    'golf_swing.2.mp4',
+    'golf_swing.3.mp4',
+    'golf_swing.4.mp4',
+    'golf_swing.5.mp4',
+    'golf_swing.6.mp4',
+    'golf_swing.7.mp4']

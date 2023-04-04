@@ -1,0 +1,6 @@
+exp_dir: '/home/groups/syyeung/wangkua1/nemo/exps/mymocap_baseball_pitch'
+videos:
+  root_dir: '/home/groups/syyeung/wangkua1/data/mymocap/trimmed1'
+  names: 
+    ['baseball_pitch.0.mp4',
+     'baseball_pitch.2.mp4']
