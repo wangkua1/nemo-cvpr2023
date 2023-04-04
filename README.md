@@ -46,7 +46,7 @@ Note, we only provide these for the purpose of reproducing our work, *please res
 
 # Dataset: *NeMo-MoCap*
 1. Download the dataset from this [Google Drive folder](https://drive.google.com/drive/folders/141-mBNwaSxYa4TB7HR4emDbMJ3ykc964?usp=share_link).
-It should have a file structure as follows:
+You should organize your files into the following structure:
 ```
 /nemo
 -- /data
