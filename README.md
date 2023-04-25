@@ -1,4 +1,8 @@
 # NeMo [CVPR2023 Highlight]
+[![Project Page](https://img.shields.io/badge/-project%20page-blueviolet)](https://sites.google.com/view/nemo-neural-motion-field)
+[![arXiv](https://img.shields.io/badge/arxiv-2212.13660-red)](https://arxiv.org/abs/2212.13660)
+
+
 
 This repo contains the official PyTorch implementation of our paper:
   
