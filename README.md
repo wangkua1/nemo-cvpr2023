@@ -9,7 +9,7 @@ This repo contains the official PyTorch implementation of our paper:
 **NeMo: 3D Neural Motion Fields from Multiple Video Instances of the Same Action**  
 *by* [Kuan-Chieh (Jackson) Wang](https://wangkua1.github.io/), [Zhenzhen Weng](https://zzweng.github.io/), [Maria Xenochristou](https://mariaxen.github.io/), [Joao Pedro Araujo](https://scholar.google.com/citations?user=fs8k5acAAAAJ&hl=en), [Jeffrey Gu](https://its-gucci.github.io/), [C. Karen Liu](https://tml.stanford.edu/), [Serena Yeung](https://ai.stanford.edu/~syyeung/)
 
-**([Project Page 🌐](https://sites.google.com/view/nemo-neural-motion-field) | [ArXiv 📄](https://arxiv.org/abs/2212.13660))**
+**([Project Page 🌐](https://sites.google.com/view/nemo-neural-motion-field) | [ArXiv 📄](https://arxiv.org/abs/2212.13660) | [Data 📀](https://drive.google.com/drive/folders/141-mBNwaSxYa4TB7HR4emDbMJ3ykc964?usp=share_link))**
 
 ![NeMo System Figure](asset/nemo-sys-fig.jpeg)
 ![NeMo Demo](asset/baseball%20pitch%20(test%201).gif)
