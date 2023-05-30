@@ -31,6 +31,9 @@ __pycache__/
 
 # C extensions
 *.so
+#humor
+/humor/out
+/humor/data
 
 # Distribution / packaging
 .Python
