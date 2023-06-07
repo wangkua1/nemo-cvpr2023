@@ -54,10 +54,9 @@ VIBE is another 3D HMR model that predicts the SMPL parameters of human motion g
   |   | -- <ACTION>.<INDEX>.mp4
   |   |  ......
   | -- /exps
-  |   | -- /your_experiment_directory_<ACTION>
-  |   |    | -- /<ACTION>.<INDEX>.frames
-  |   |    | -- /<ACTION>.<INDEX>.op
-  |   |    | -- /<ACTION>.<INDEX>.vibe
+  |   | -- /<ACTION>.<INDEX>.frames
+  |   | -- /<ACTION>.<INDEX>.op
+  |   | -- /<ACTION>.<INDEX>.vibe
   |   |  ......
   | -- opt_cam_IMG_6287.pt
   | -- opt_cam_IMG_6289.pt
