@@ -1,4 +1,5 @@
 #!/bin/bash
+export PATH="/pasteur/u/jeffheo/miniconda3/bin:$PATH"
 
 # Name of the yml file without the extension
 vibe_name="vibe_environment"
@@ -6,13 +7,11 @@ vibe_name="vibe_environment"
 conda env create -f ${vibe_name}.yml
 # Activate the environment
 conda activate $vibe_name
-#install yq to current environment
-conda install -c conda-forge yq
 
-video_names=$(yq e '.videos.names[]' nemo-config.yml)
+video_names=$(yq e '.videos.names[]' ./nemo-config.yml)
 
 # change write permissions for the data folder so that the docker container can write to it
-chmod 777 data
+chmod 777 ./data
 
 # iterate over video names
 for name in $video_names; do
@@ -28,11 +27,12 @@ conda env create -f ${env_name}.yml
 conda activate $env_name
 #iterate over video names 
 #get the number of videos
-num_videos=$(yq e '.videos.num' nemo-config.yml)
+num_videos=$(yq e '.videos.names | length' ./nemo-config.yml)
+count=$((num_videos))
 for name in $video_names; do
     #get the name of the video before the . in the name
     video_name=$(echo $name | cut -d'.' -f 1)
-    python ./video_to_frames_custom.py --action $video_name --num_videos $num_videos  --display
+    python ./video_to_frames_custom.py --action $video_name --num_videos $count  --display
     docker run --gpus 5 --rm -v /pasteur/u/jeffheo/projects/nemo-cvpr2023-jeff/custom_video/data/exps:/mnt cwaffles/openpose ./build/examples/openpose/openpose.bin --image_dir /mnt/${name}.frames --write_json /mnt/${name}.op --display 0  --model_pose BODY_25 --number_people_max 1 --render_pose 0
 done
 

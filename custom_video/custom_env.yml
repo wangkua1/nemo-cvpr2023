@@ -1,4 +1,4 @@
-name: nemo_jeff
+name: nemo_custom
 channels:
   - pytorch
   - nvidia
@@ -166,4 +166,3 @@ dependencies:
       - wcwidth==0.2.6
       - yacs==0.1.8
       - yolov3==0.1
-prefix: /pasteur/u/jeffheo/miniconda3/envs/nemo_jeff
