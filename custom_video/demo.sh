@@ -6,6 +6,7 @@ vibe_name="vibe_environment"
 # Create the environment from the yml file
 conda env create -f ${vibe_name}.yml
 # Activate the environment
+conda init bash
 conda activate $vibe_name
 
 video_names=$(yq e '.videos.names[]' ./nemo-config.yml)
