@@ -1,6 +1,4 @@
 #!/bin/bash
-export PATH="/pasteur/u/jeffheo/miniconda3/bin:$PATH"
-
 # Name of the yml file without the extension
 vibe_name="vibe_environment"
 # Create the environment from the yml file
