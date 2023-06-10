@@ -68,10 +68,14 @@ def main(args):
     if not os.path.isfile(video_file):
         exit(f'Input video \"{video_file}\" does not exist!')
 
-    output_path = os.path.join(args.output_folder, os.path.basename(video_file).replace('.mp4', ''))
+    output_path = os.path.join(args.output_folder, os.path.basename(video_file).replace('.mp4', '.vibe'))
+    #print (output_path)
+    print(f'Output folder: {output_path}')
+
     os.makedirs(output_path, exist_ok=True)
 
     image_folder, num_frames, img_shape = video_to_images(video_file, return_info=True)
+    print('Images are extracted at {}!'.format(image_folder))
 
     print(f'Input video number of frames {num_frames}')
     orig_height, orig_width = img_shape[:2]
@@ -386,7 +390,7 @@ if __name__ == '__main__':
     parser.add_argument('--run_smplify', action='store_true',
                         help='run smplify for refining the results, you need pose tracking to enable it')
 
-    parser.add_argument('--no_render', action='store_true',
+    parser.add_argument('--no_render', type=bool, default=True,
                         help='disable final rendering of output video.')
 
     parser.add_argument('--wireframe', action='store_true',

@@ -1,6 +1,6 @@
 import joblib
-
 import os
+os.environ["PYOPENGL_PLATFORM"] = "osmesa"
 import os.path as osp
 import cv2
 import sys

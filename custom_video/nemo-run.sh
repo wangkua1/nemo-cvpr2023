@@ -41,7 +41,7 @@ partition=pasteur
 cmd="python -m scripts.learned_multi_view_recon_nn \
     --default_config config/default-v1.yml \
     --label_type ${label_type} \
-    --data_loader_type generic \
+    --data_loader_type demo \
     --nemo_cfg_path custom_video/nemo-config.yml \
     --out_dir custom_video/out/${expname} \
     --lr_factor ${lr_factor} \
@@ -63,7 +63,7 @@ cmd="python -m scripts.learned_multi_view_recon_nn \
     --h_dim ${h_dim} \
     --render_rollout_figure \
     --weight_3d_loss ${weight_3d_loss} \
-    --render_video 0 \
+    --render_video 1 \
     --db
 "
 

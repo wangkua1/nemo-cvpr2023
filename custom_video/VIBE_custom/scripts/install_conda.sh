@@ -13,4 +13,4 @@ which pip
 
 pip install numpy==1.17.5 torch==1.4.0 torchvision==0.5.0
 pip install git+https://github.com/giacaglia/pytube.git --upgrade
-pip install -r requirements.txt
+pip install -r ./VIBE_custom/requirements.txt

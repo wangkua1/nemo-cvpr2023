@@ -1,7 +1,7 @@
-exp_dir: "/pasteur/u/jeffheo/projects/nemo-cvpr2023-jeff/custom_video/data/exps/"
+exp_dir: "./custom_video/data/exps/"
 format: "release"
 videos:
-  root_dir: "/pasteur/u/jeffheo/projects/nemo-cvpr2023-jeff/custom_video/data/videos/"
+  root_dir: "./custom_video/data/videos/"
   names:
     [
       "tennis_swing.0",
@@ -11,3 +11,5 @@ videos:
       "tennis_swing.4",
       "tennis_swing.5",
     ]
+
+
