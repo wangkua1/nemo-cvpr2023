@@ -6,7 +6,6 @@ export PATH="$PATH:."
 # Create the environment from the yml file
 source ./VIBE_custom/scripts/install_conda.sh
 
-
 # Obtain video names from nemo-config.yml
  video_names=($(awk '/names:/{flag=1;next}/]/{flag=0}flag' ./nemo-config.yml | grep -o '"[^"]*"' | sed 's/"//g'))
 # # Print the video names one per line
@@ -20,7 +19,7 @@ chmod -R 777 "$data_dir"
 cd ./VIBE_custom
 # Iterate over video names
 for name in "${video_names[@]}"; do
-     python ./demo.py --vid_file "../${data_dir}/videos/${name}.mp4" --output_folder "../${data_dir}/exps/"
+     python ./demo.py --vid_file "${data_dir}/videos/${name}.mp4" --output_folder "${data_dir}/exps/"
 done
 
 cd ..
