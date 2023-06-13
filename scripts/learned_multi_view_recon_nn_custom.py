@@ -31,7 +31,7 @@ from hmr.hmr_model import get_pretrained_hmr
 from hmr.img_utils import get_single_image_crop
 # import wandb
 
-from nemo.neural_motion_model_jeff import *
+from nemo.neural_motion_model import *
 from nemo.multi_view_sequence import PennActionMultiViewSequence, MultiViewSequence, DemoMultiViewSequence
 from nemo.utils.exp_utils import create_latest_child_dir, Timer, process_default_config
 from nemo.utils.render_utils import render_video, render_figures

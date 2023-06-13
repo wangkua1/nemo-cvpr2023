@@ -89,12 +89,12 @@ def add_keypoints_to_image(im, joints2d, conf_thresh=0.5):
 
 def render_video(vid_name, args, multi_view_model, num_frames, gt=False):
     name = vid_name
-    if multi_view_model.num_views < 5:
-        view_idxs = np.arange(multi_view_model.num_views)
-    else:
-        view_idxs = [0, 2, 4, 6]
+    #if multi_view_model.num_views < 5:
+    view_idxs = np.arange(multi_view_model.num_views)
+    #else:
+        #view_idxs = [0, 2, 4, 6]
     # view_idxs = [0, 1, 2] # [0, 2, 4, 6]
-    print('Rendering')
+    print('Rendering Video')
     with Timer('Rendering'):
         if gt:
             cache_dir = multi_view_model.render_gt_rollout(
@@ -113,6 +113,7 @@ def render_video(vid_name, args, multi_view_model, num_frames, gt=False):
         for view_idx in range(len(view_idxs)):
             img_path = osp.join(cache_dir, f"{view_idx:03d}_{fidx:03d}.png")
             ims.append(cv2.imread(img_path))
+            os.remove(img_path)
         im = cv2.hconcat(ims)
         cv2.imwrite(osp.join(cache_dir, f'{fidx:06d}.png'), im)
 

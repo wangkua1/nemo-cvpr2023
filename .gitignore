@@ -152,4 +152,5 @@ dmypy.json
 .pyre/
 
 /custom_video/data/
+/custom_video/out/
 

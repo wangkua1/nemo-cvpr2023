@@ -22,7 +22,7 @@ dependencies:
   - cuda-nvrtc=11.7.99=0
   - cuda-nvtx=11.7.91=0
   - cuda-runtime=11.7.1=0
-  - ffmpeg=4.3=hf484d3e_0
+  - defaults::ffmpeg=4.2.2
   - freetype=2.12.1=h4a9f257_0
   - future=0.18.2=py37h89c1867_5
   - giflib=5.2.1=h5eee18b_3
@@ -90,6 +90,7 @@ dependencies:
   - typing_extensions=4.3.0=py37h06a4308_0
   - urllib3=1.26.14=py37h06a4308_0
   - wheel=0.38.4=py37h06a4308_0
+  - defaults::x264
   - xorg-kbproto=1.0.7=h7f98852_1002
   - xorg-libice=1.0.10=h7f98852_0
   - xorg-libsm=1.2.3=hd9c2040_1000

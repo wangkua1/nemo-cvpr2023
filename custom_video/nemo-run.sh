@@ -10,7 +10,6 @@ for warmup_step in 300; do
 for rbf_kernel in 'quadratic'; do
 for lr_factor in 1; do
 for loss in mse_robust; do
-for action in baseball-pitch; do
 for label_type in op; do
 for weight_3d_loss in 1000; do
 
@@ -34,11 +33,11 @@ esac
 n_steps=2000
 
 cur_fname="$(basename $0 .sh)"
-expname=${cur_fname}-${action}-${lr_human}-${lr_instance}-${instance_code_size}-${lr_phase}-${weight_gmm_loss}-${weight_vp_loss}-${weight_vp_z_loss}-${h_dim}-${phase_rbf_dim}-${rbf_kernel}-${warmup_step}-${lr_factor}-${loss}-${label_type}-${weight_3d_loss}
+expname=${cur_fname}-${lr_human}-${lr_instance}-${instance_code_size}-${lr_phase}-${weight_gmm_loss}-${weight_vp_loss}-${weight_vp_z_loss}-${h_dim}-${phase_rbf_dim}-${rbf_kernel}-${warmup_step}-${lr_factor}-${loss}-${label_type}-${weight_3d_loss}
 
 partition=pasteur
 
-cmd="python -m scripts.learned_multi_view_recon_nn \
+cmd="python -m scripts.learned_multi_view_recon_nn_custom \
     --default_config config/default-v1.yml \
     --label_type ${label_type} \
     --data_loader_type demo \
