@@ -1,0 +1,15 @@
+exp_dir: "./custom_video/data/exps/"
+format: "release"
+videos:
+  root_dir: "./custom_video/data/videos/"
+  names:
+    [
+      "tennis_swing.0",
+      "tennis_swing.1",
+      "tennis_swing.2",
+      "tennis_swing.3",
+      "tennis_swing.4",
+      "tennis_swing.5",
+    ]
+
+

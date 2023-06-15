@@ -31,6 +31,9 @@ __pycache__/
 
 # C extensions
 *.so
+#humor
+humor/out
+humor/data
 
 # Distribution / packaging
 .Python
@@ -147,4 +150,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+/custom_video/data/
+/custom_video/out/
 
