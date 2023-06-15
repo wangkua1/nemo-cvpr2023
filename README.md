@@ -1,56 +1,64 @@
 # NeMo [CVPR2023 Highlight]
+
 [![Project Page](https://img.shields.io/badge/-project%20page-blueviolet)](https://sites.google.com/view/nemo-neural-motion-field)
 [![arXiv](https://img.shields.io/badge/arxiv-2212.13660-red)](https://arxiv.org/abs/2212.13660)
 
-
-
 This repo contains the official PyTorch implementation of our paper:
-  
+
 **NeMo: 3D Neural Motion Fields from Multiple Video Instances of the Same Action**  
-*by* [Kuan-Chieh (Jackson) Wang](https://wangkua1.github.io/), [Zhenzhen Weng](https://zzweng.github.io/), [Maria Xenochristou](https://mariaxen.github.io/), [Joao Pedro Araujo](https://scholar.google.com/citations?user=fs8k5acAAAAJ&hl=en), [Jeffrey Gu](https://its-gucci.github.io/), [C. Karen Liu](https://tml.stanford.edu/), [Serena Yeung](https://ai.stanford.edu/~syyeung/)
+_by_ [Kuan-Chieh (Jackson) Wang](https://wangkua1.github.io/), [Zhenzhen Weng](https://zzweng.github.io/), [Maria Xenochristou](https://mariaxen.github.io/), [Joao Pedro Araujo](https://scholar.google.com/citations?user=fs8k5acAAAAJ&hl=en), [Jeffrey Gu](https://its-gucci.github.io/), [C. Karen Liu](https://tml.stanford.edu/), [Serena Yeung](https://ai.stanford.edu/~syyeung/)
 
 **([Project Page 🌐](https://sites.google.com/view/nemo-neural-motion-field) | [ArXiv 📄](https://arxiv.org/abs/2212.13660))**
 
 ![NeMo System Figure](asset/nemo-sys-fig.jpeg)
-![NeMo Demo](asset/baseball%20pitch%20(test%201).gif)
+![NeMo Demo](<asset/baseball%20pitch%20(test%201).gif>)
 
 # Installation
-### Environment 
+
+### Environment
+
 1. Clone this repository.
+
 ```
 git clone git@github.com:wangkua1/nemo-cvpr2023.git
 ```
 
 2. Create a conda environment using the provided environment file.
+
 ```
 conda env create -f environment.yml
 ```
-Then, activate the conda environment using 
+
+Then, activate the conda environment using
+
 ```
 conda active nemo
 ```
 
 3. Pip install the missing packages using the provided requirements file.
+
 ```
 pip install -r requirements.txt
 ```
 
-
 ### Other software downloads
+
 1. Create a directory `software`.
 
 2. Download the required components:
-* "V02_05" -- requied by human_body_prior.  Follow the original instructions at the [VPoser github page](https://github.com/nghorbani/human_body_prior).
-* "spin_data" -- Follow the original instructions at the [SPIN github page](https://github.com/nkolot/SPIN).
-* "smpl" -- Follow the original instructions at [their website](https://smpl.is.tue.mpg.de/).
 
-Alternatively, download them at this [link](https://drive.google.com/drive/folders/1mEqMgHRndJK_4skVP-3v4mxUIS0FapQk?usp=share_link). 
-Note, we only provide these for the purpose of reproducing our work, *please respect the original instruction, license, and copyright*.
+- "V02_05" -- requied by human_body_prior. Follow the original instructions at the [VPoser github page](https://github.com/nghorbani/human_body_prior).
+- "spin_data" -- Follow the original instructions at the [SPIN github page](https://github.com/nkolot/SPIN).
+- "smpl" -- Follow the original instructions at [their website](https://smpl.is.tue.mpg.de/).
 
+Alternatively, download them at this [link](https://drive.google.com/drive/folders/1mEqMgHRndJK_4skVP-3v4mxUIS0FapQk?usp=share_link).
+Note, we only provide these for the purpose of reproducing our work, _please respect the original instruction, license, and copyright_.
 
-# Dataset: *NeMo-MoCap*
+# Dataset: _NeMo-MoCap_
+
 1. Download the dataset from this [Google Drive folder](https://drive.google.com/drive/folders/141-mBNwaSxYa4TB7HR4emDbMJ3ykc964?usp=share_link).
-You should organize your files into the following structure:
+   You should organize your files into the following structure:
+
 ```
 /nemo
 -- /data
@@ -72,25 +80,32 @@ You should organize your files into the following structure:
 ```
 
 2. Conver the mp4 videos into frames.
+
 ```bash
 python -m scripts.video_to_frames
 ```
-
 
 # Running NeMo
 
 A example inference script for running NeMo on the "Baseball Pitch" motion on the NeMo-MoCap dataset is provided `run_scripts/examples`.  
 You can run it locally using the following command:
+
 ```
 bash run_scripts_examples/nemomocap-example.sh 0
 ```
+
 or launching a SLURM job with `sbatch` using
+
 ```
 bash run_scripts_examples/nemomocap-example.sh 1
 ```
 
+# Running NeMo on your custom video dataset
+
+If you wish to run NeMo on your own video dataset, refer to [Custom Video README](custom_video/README.md).
 
 # Acknowledgement
+
 NeMo is built on many other great works, including
 [VPoser](https://github.com/nghorbani/human_body_prior),
 [SPIN](https://github.com/nkolot/SPIN),
@@ -101,7 +116,9 @@ NeMo is built on many other great works, including
 [GLAMR](https://github.com/NVlabs/GLAMR).
 
 # Citation
+
 If you find this work useful, please consider citing:
+
 ```
 @inproceedings{wang2022nemo,
   title={NeMo: 3D Neural Motion Fields from Multiple Video Instances of the Same Action},
