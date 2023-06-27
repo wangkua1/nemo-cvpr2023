@@ -51,16 +51,16 @@ pip install -r requirements.txt
 - "spin_data" -- Follow the original instructions at the [SPIN github page](https://github.com/nkolot/SPIN).
 - "smpl" -- Follow the original instructions at [their website](https://smpl.is.tue.mpg.de/).
 
-Alternatively, download them at this [link](https://drive.google.com/drive/folders/1mEqMgHRndJK_4skVP-3v4mxUIS0FapQk?usp=share_link).
+Alternatively, download them at this [link](https://drive.google.com/drive/folders/1mEqMgHRndJK_4skVP-3v4mxUIS0FapQk?usp=share_link) (~0.5GB).
 Note, we only provide these for the purpose of reproducing our work, _please respect the original instruction, license, and copyright_.
 
 # Dataset: _NeMo-MoCap_
 
-1. Download the dataset from this [Google Drive folder](https://drive.google.com/drive/folders/141-mBNwaSxYa4TB7HR4emDbMJ3ykc964?usp=share_link).
+1. Download the dataset from this [Google Drive folder](https://drive.google.com/drive/folders/141-mBNwaSxYa4TB7HR4emDbMJ3ykc964?usp=share_link) (~1GB).
    You should organize your files into the following structure:
 
 ```
-/nemo
+/nemo-cvpr2023
 -- /data
   | -- /videos
   |   | -- <ACTION>.<INDEX>.mp4
@@ -79,7 +79,7 @@ Note, we only provide these for the purpose of reproducing our work, _please res
 
 ```
 
-2. Conver the mp4 videos into frames.
+2. Convert the mp4 videos into frames (takes <3min).
 
 ```bash
 python -m scripts.video_to_frames
